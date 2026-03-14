@@ -7,24 +7,24 @@
 class TokenCount < Formula
   desc "Count tokens for LLM models using exact tokenization"
   homepage "https://github.com/shaunburdick/token-count"
-  version "0.2.2"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/shaunburdick/token-count/releases/download/v0.2.2/token-count-0.2.2-x86_64-apple-darwin.tar.gz"
-      sha256 "d1ae929c96718fa6967851f5e2bb3f8a5d2dc4ba3ee4a862468df1b7f56e84a4"
+      url "https://github.com/shaunburdick/token-count/releases/download/v0.3.0/token-count-0.3.0-x86_64-apple-darwin.tar.gz"
+      sha256 "e26f65479d874b96d0274a94fd1075216bead1aa4934a8cab715bc591417e9c6"
     end
     on_arm do
-      url "https://github.com/shaunburdick/token-count/releases/download/v0.2.2/token-count-0.2.2-aarch64-apple-darwin.tar.gz"
-      sha256 "56e4e748d2fa25136b56bd46ba7a7aacb74d431d1e92fbac45f30547e060d135"
+      url "https://github.com/shaunburdick/token-count/releases/download/v0.3.0/token-count-0.3.0-aarch64-apple-darwin.tar.gz"
+      sha256 "e0d33a33742122bfa127117db6cfd49381931265494d73f80279f15805fc056f"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/shaunburdick/token-count/releases/download/v0.2.2/token-count-0.2.2-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "07dd70488043575bd6f4d1fd6912dd807ba21f9d31d55eab58de3f5d61f57dec"
+      url "https://github.com/shaunburdick/token-count/releases/download/v0.3.0/token-count-0.3.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "c022b25da41352681c8ce4634163d500279f6b3fca169cb3f88421fae234d5d6"
     end
   end
 
@@ -34,7 +34,7 @@ class TokenCount < Formula
 
   test do
     assert_match "token-count #{version}", shell_output("#{bin}/token-count --version")
-
+    
     # Test basic functionality
     output = pipe_output("#{bin}/token-count", "Hello, world!")
     assert output.to_i > 0, "Expected token count > 0"
