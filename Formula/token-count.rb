@@ -8,7 +8,7 @@ class TokenCount < Formula
   desc "Count tokens for OpenAI API requests"
   homepage "https://github.com/shaunburdick/token-count"
   url "https://github.com/shaunburdick/token-count/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "PLACEHOLDER_WILL_BE_UPDATED_BY_GITHUB_ACTIONS"
+  sha256 "251f448dfc84baecc139f2cbbcfe21e7fb45635ef47b585cf05b31c0c754ae0a"
   license "MIT"
   head "https://github.com/shaunburdick/token-count.git", branch: "main"
 
