@@ -13,18 +13,18 @@ class TokenCount < Formula
   on_macos do
     on_intel do
       url "https://github.com/shaunburdick/token-count/releases/download/v0.2.2/token-count-0.2.2-x86_64-apple-darwin.tar.gz"
-      sha256 ""
+      sha256 "d1ae929c96718fa6967851f5e2bb3f8a5d2dc4ba3ee4a862468df1b7f56e84a4"
     end
     on_arm do
       url "https://github.com/shaunburdick/token-count/releases/download/v0.2.2/token-count-0.2.2-aarch64-apple-darwin.tar.gz"
-      sha256 ""
+      sha256 "56e4e748d2fa25136b56bd46ba7a7aacb74d431d1e92fbac45f30547e060d135"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/shaunburdick/token-count/releases/download/v0.2.2/token-count-0.2.2-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 ""
+      sha256 "07dd70488043575bd6f4d1fd6912dd807ba21f9d31d55eab58de3f5d61f57dec"
     end
   end
 
@@ -34,7 +34,7 @@ class TokenCount < Formula
 
   test do
     assert_match "token-count #{version}", shell_output("#{bin}/token-count --version")
-    
+
     # Test basic functionality
     output = pipe_output("#{bin}/token-count", "Hello, world!")
     assert output.to_i > 0, "Expected token count > 0"
